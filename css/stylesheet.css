@@ -146,7 +146,7 @@ html, body {
 /* ---------------------- */
 /* --- Mobile Devices --- */
 /* ---------------------- */
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-device-width: 1440px) {
 	
 	/* Content Table */
 	.contentLeft {
