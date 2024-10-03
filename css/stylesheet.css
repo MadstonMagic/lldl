@@ -1,0 +1,176 @@
+:root {
+	--lldlWhite: rgba(235,237,236,1);
+	--lldlRed: rgba(172,49,78,1);
+	--lldlDarkRed: rgba(75,20,30,1);
+	--black: rgba(0,0,0,1);
+	
+	--mainFont: "Quicksand";
+}
+html, body {
+	background-color: var(--lldlWhite);
+	font-family: var(--mainFont);
+	padding:0;
+	margin:0;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* --------------------- */
+/* --- Content Table --- */
+/* --------------------- */
+.contentTable {
+	width: 90%;
+	padding: 10px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+.contentTable li {
+	list-style-type: none;
+	/*display: inline-block;*/
+}
+.small-img-logo {
+    width: 100px;
+    height: auto;
+}
+
+
+/* -------------------- */
+/* --- Content Left --- */
+/* -------------------- */
+.contentLeft .headerText {
+	font-size: 28px;
+}
+
+
+
+/* ---------------------- */
+/* --- Question Cards --- */
+/* ---------------------- */
+.links {
+	background-color: var(--lldlRed);
+    color: var(--lldlWhite);
+    padding: 5px 10px;
+    width: 400px;
+    box-shadow: 5px 5px 0px var(--lldlDarkRed);
+}
+.links:hover {
+	box-shadow: 0px 0px 0px #fff;
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+.links a {
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--lldlWhite);
+}
+.card-img-logo {
+	width: 150px;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+
+
+
+/* ---------------------- */
+/* --- Question Cards --- */
+/* ---------------------- */
+.contentRight{position: relative;}
+.contentRight .cardsArea {
+	position: relative;
+}
+.contentRight .cards{
+	position: absolute;
+	display: block;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: var(--lldlRed);
+	width: calc(45vw);
+	height: calc(75vh);
+	border-radius: 50px;
+	border: 10px solid var(--lldlRed);
+}
+.contentRight .cards .cardTextArea{
+	background-color: var(--lldlWhite);
+	position: relative;
+	top: 50%;
+	transform: translate(0%,-50%);
+	padding: 25px;
+	widht: 100%;
+	font-size: 32px;
+	border-radius: 50px;
+}
+
+
+/* ---------------------- */
+/* --- Shuffle Button --- */
+/* ---------------------- */
+.question-btn-wrapper {
+	transition: all 0.3s;
+    z-index: 100;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 200px;
+    transform: translate(-50%, 0);
+    font-size: 48px;
+    background-color: var(--lldlWhite);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 100%;
+	cursor: pointer;
+}
+.question-btn-wrapper:hover i {
+	color: var(--lldlRed);
+}
+.question-btn-wrapper .btn-NextQuestion {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);	
+}
+
+
+/* ---------------------- */
+/* --- Mobile Devices --- */
+/* ---------------------- */
+@media only screen and (max-width: 850px) {
+	
+	/* Content Table */
+	.contentLeft {
+		display: none !important;
+	}
+	.contentRight .cardsArea {
+		position: absolute;
+		left: 0%;
+		transform: translate(0, 0);
+	}
+	.contentRight .cards{
+		display: block;
+        background-color: var(--lldlRed);
+        width: calc(90vw);
+        height: calc(90vh);
+        position: absolute;
+        left: -10px;
+        padding: 0;
+        transform: translate(0, 0);
+        margin: 0;
+	}	
+	.contentTable tr td.contentLeft, .contentTable tr td.contentRight {width: 100%;height:auto;}
+	.card-img-logo {
+		width: 10em;
+		height: auto;
+	}
+}
