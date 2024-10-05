@@ -72,7 +72,7 @@ $(document).ready( function() {
 		'Wat is de vreemdste situatie die je tijdens een date/relatie ooit hebt meegemaakt?',
 		'Wat is je grootste angst?',
 		'10 minuten gratis winkelen, waar zou ,je dit doen?',
-		'Ben jij wel of niet dominant in bed?'
+		'Ben jij wel of niet dominant in bed?',
 		'Geef elkaar een welgemeend compliment!',
 		'Heb je thuis seksspeeltjes liggen of ooit gehad?',
 		'Liever slim of grappig zijn?',
