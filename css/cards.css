@@ -112,6 +112,15 @@ ul.cardLayout li {padding:25px;}
 }
 
 
+/* ------------------- */
+/* --- Joker Cards --- */
+/* ------------------- */
+span.cardJoker b { color: var(--lldlRed); }
+span.cardJoker { font-style: italic; }
+
+
+
+
 /* ---------------------- */
 /* --- Mobile Devices --- */
 /* ---------------------- */

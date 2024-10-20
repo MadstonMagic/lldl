@@ -32,7 +32,11 @@ $(document).ready( function() {
 		'Vind je het belangrijk dat je partner wilt reizen?',
 		'Samen een hobby delen is belangrijk voor een goede relatie, waar of niet waar?',
 		'Kaas- of chocoladefondue?',
-		'Liever een week samen op een eiland of op een berg?',
+		'Liever een week samen op een onbewoond eiland of op een berg?',
+		'Wat was je eerste gedachte bij onze eerste date?',
+		'Hoe ziet jouw ideale vakantie er uit?',
+		'Als je partner haar-/zichzelf niet lekker voelt, leg jij haar/hem dan goed in de watten?',
+		'Je bent ongesteld, verwacht je van je partner dat hij je verwend? En zo ja, wanneer zou je hem dan verwennen?',
 		
 		// Visuals
 		'Ben ik knapper dan je ex?',
@@ -55,10 +59,16 @@ $(document).ready( function() {
 		'Een vrouw moet lange haren hebben, eens of oneens?',
 		'Een vrouw met lange nepnagels is een afknapper, eens of oneens?',
 		'Wat vind je van een bril bij je partner?',
-		'Een partner die op slippers of crocs loopt, is dit een afknapper?',
+		'Een partner die constant op slippers of crocs loopt, is dit een afknapper?',
 		'Wel of geen baard?',
 		'Ben je ergens onzeker over? Zo ja, waarover?',
 		'Is een \'goede\' kledingstijl belangrijk?',
+		'Wat is jouw favoriete kledingstuk?',
+		'Op welk onderdeel van je lichaam ben je het meest trots?',
+		'Noem beiden 3 dingen die je aantrekkelijk aan elkaar vindt.',
+		'Badpak of bikini?',
+		'Wat vind je van een man in pak?',
+		'Wat vind je van een vrouw in een mooie jurk?',
 
 		// Bedtime
 		'Een partner die niet kan communiceren of slecht is in bed?',
@@ -67,7 +77,7 @@ $(document).ready( function() {
 		'Liever knuffelend in slaap vallen of voor het slapen gaan nog seks?',
 		'Ben jij van het onderzoeken/experimenteren tussen de lakens?',
 		'Heb je de behoefte om je date te bespringen?',
-		'Heb je ooit een pikante foto gestuurd én ontvangen?',
+		'Heb je ooit een pikante foto gestuurd &#233;n ontvangen?',
 		'Samen intieme video\'s kijken, kan dat?',
 		'Is zelfgenot tijdens je relatie een vorm van vreemdgaan?',
 		'Is seks meer voor de lust of de liefde?',
@@ -86,16 +96,24 @@ $(document).ready( function() {
 		'Is een \'goed\' lichaam belangrijk voor goed genot in een seksleven?',
 		'Lichamelijk contact is net zo belangrijk als goede communicatie, eens of oneens?',
 		'Wat is jouw body-count?',
+		'Heb je al met veel mensen gezoend?',
 		'Een partner die een hoog bodycount gehalte heeft, is dit een afknapper?',
 		'Zuigzoenen, ja of nee?',
-		'Wel of geen haar op de intieme zone?',
+		'Wel of geen haar op rond het geslachtsdeel?',
 		'Wat is je favoriete manier van intimiteit?',
-		'Vind je sfeer maken vóór seks een belangrijk onderdeel?',
+		'Vind je sfeer maken v&#243;&#243;r seks een belangrijk onderdeel?',
 		'Speelt humor een rol in jouw seksleven?',
 		'Hoe vaak wil je seks per week?',
 		'Wat vind je van praten over seksuele verlangens?',
 		'Heb jij een ondeugende kant in bed die je niet verwacht?',
 		'Wat is een fantasie dat je nog wilt uitproberen?',
+		'Seks met de lichten aan of uit?',
+		'Hoe cre&#235;er jij een intieme sfeer?',
+		'Wat vind jij van af en toe een mep op je billen?',
+		'Ben je meer van het geven of nemen tussen de lakens?',
+		'Is penetratie het belangrijkste van seks?',
+		'Slikken, ja of nee?',
+		'Stel je partner zou tijdens het klaarkomen squirten, wat vind je daar van?',
 		
 		//Relationship
 		'Hecht je veel waarde aan monogamie?',
@@ -112,12 +130,16 @@ $(document).ready( function() {
 		'Wat vind je er van als je partner veel vrienden heeft van het andere geslacht?',
 		'Wil je straks zelf kinderen?',
 		'Je partner snurkt, is dit een afknapper?',
-		'Wat vind je belangrijk in een relatie',
-		'Stel je partner wil uit gaan met vrienden of vriendinnen, vind je dat oké?',
+		'Wat vind je belangrijk in een relatie?',
+		'Stel je partner wil uit gaan met vrienden of vriendinnen, vind je dat ok&#233;?',
 		'Wat vind je er van als je partner het niet erg vindt zijn/haar emoties te laten zien?',
 		'Welk romantisch gebaar betekend veel voor je?',
 		'Wat wil je altijd al met een partner samen doen?',
 		'Hoe vier je een jubileum in je relatie?',
+		'Vind je het aantrekkelijk als je partner een string draagt?',
+		'Wat vind je van een open-relatie?',
+		'Samen in het weekend borrelen met een borrelplank? Ja of nee?',
+		'Wanneer is het een goed moment om de ouders van elkaar te ontmoeten?',
 		
 		//Future / Past
 		'Huisje Boompje Beestje of vrij in de wereld?',
@@ -126,7 +148,7 @@ $(document).ready( function() {
 		'Zou je voor een dag van geslacht willen wisselen? Zo ja, wat zou je dan doen?',
 		'Wat is jouw meest beschamende moment dat je kan bedenken?',
 		'10 minuten gratis winkelen, waar zou je dit doen?',
-		'Liever in de toekomst kunnen kijken of het veleden kunnen veranderen?',
+		'Liever in de toekomst kunnen kijken of het verleden kunnen veranderen?',
 		'Hoe zie jij jezelf over 10 jaar?',
 		'Nooit meer vlees of nooit meer vis eten?',
 		'Ben je wel eens gekwetst in de liefde? Zo ja, hoe ging je daar mee om?',
@@ -138,7 +160,7 @@ $(document).ready( function() {
 		'Is roken een afknapper om een eerste date af te wijzen?',
 		'Wat vind je belangrijker? Een goed gebit, een verzorgde huid of een goede lichaamsgeur?',
 		'Liever je partner die oud kaal wordt of op jonge leeftijd grijs?',
-		'Liever iemand die gelovig is of iemand die zich met complottheoriën bezighoudt?',
+		'Liever iemand die gelovig is of iemand die zich met complottheori&#235;n bezighoudt?',
 		'Liever iemand die er minder knap is maar vol met humor, of heel erg knap maar een saaie kwal?',
 		'Op welk eigenschap ben je zelf erg trots?',
 		'Wat zoek je in een partner?',
@@ -176,15 +198,21 @@ $(document).ready( function() {
 		'Ben jij jaloers aangelegd?',
 		'Als je nog aan het daten bent, mag je dan ook met anderen afspreken?',
 		'Wat is je favoriete liedje en waarom?',
-		'Hoe laat jij zien dat je geïnteresseerd bent?',
-		'Wat zijn jouw grootste deal-breakers?',
+		'Hoe laat jij zien dat je ge&#239;nteresseerd bent?',
+		'Wat zijn voor jou de belangrijkste red-flags?',
 		'Is het Friet of Patat?',
 		'Een man met of zonder sierraden?',
 		'Op welke haarkleur val jij het meest?',
 		'Iemand die (veel) energiedranken drinkt, wat vind je daarvan?',
-		'Stel je date is vegetariër, is dit in een afknapper?',
+		'Stel je date is vegetari&#235;r, is dit in een afknapper?',
 		'Hoe ga jij met stiltes om?',
 		'Hoe zenuwachtig was je bij onze eerste date?',
+		'Hoe laat jij aan je date merken dat je gevoelens (hebt) krijgt?',
+		'Een partner die veel frisdrank drinkt is een afknapper.',
+		'Wat als tijdens het daten, de ander met anderen gaat zoenen?',
+		'Was jij zenuwachtig voor onze eerste date?',
+		'Ben je bang voor spinnen?',
+		'Ben je bang voor insecten?',
 		
 		// Do something
 		'Geef je date een compliment over iets dat hij/zij niet verwacht',
@@ -194,12 +222,16 @@ $(document).ready( function() {
 		'Laat zien wat er op de laatste foto staat die je hebt gemaakt.', 
 		'Beoordeel de billen van je date!',
 		'Omschrijf je date in 3 woorden.',
-		'Teken bij elkaar met een pen iets op de arm betreft jouw gevoelens over de ander.',
+		'Teken bij elkaar met een pen iets op de arm betreft jouw gevoelens voor de ander.',
 		'Hoe zou je reageren als ik je nu zou zoenen?',
 		'Geef je date een zoen en vertel wat je voelt.',
 		'Waar keek je het eerste naar bij je date?',
+		'Kan je date tegen kietelen? Probeer 3 plekken uit!',
 		
-		'',		
+		// Jokers
+		'<span class=\"cardJoker\"><b>Joker kaart!</b> Zoen je date tussen nu en 30 minuten op een overwacht moment!</span>',
+		'<span class=\"cardJoker\"><b>Joker kaart!</b> Geef je date onverwachts een compliment!</span>',
+		'<span class=\"cardJoker\"><b>Joker kaart!</b> Je hoeft niks te doen, laat je date jou een zoen geven!</span>'
 	]);
 	
 	// Creation of Partner array
@@ -218,12 +250,12 @@ $(document).ready( function() {
 		'Wat is jouw favoriete standje?',
 		'Doen of de Waarheid? <b>Doen: </b>Ga in je ondergoed naast je partner liggen. <b>Waarheid: </b>Hoe vind jij je partner op zijn/haar sexiest?',
 		'Hoe ziet jouw toekomst er uit met mij?',
-		'Welke fantasieën willen jullie nog ontdekken? Zeg het tegelijkertijd op 3.',
+		'Welke fantasie&#235;n willen jullie nog ontdekken? Zeg het tegelijkertijd op 3.',
 		'Hoe vind jij het fijn om intiem aangeraakt te worden?',
 		'Wat zorgt ervoor dat jij altijd in de stemming komt?',
 		'Welke sexuele fantasie heb jij nog niet gedeeld met mij?',
 		'Wil je graag seksspeeltjes gebruiken tijdens seks met je partner, en niet alleen tijdens masturbatie?',
-		'Hoe kunnen wij het hoogtepunt leuker maken voor ons beiden? (Niet? hoe zou je het dan interessanter maken?)',
+		'Hoe kunnen wij het hoogtepunt leuker maken voor ons beiden?',
 		'Ben jij open-minded genoeg om andere dingen te proberen? (Bijvoorbeeld anaal, een trio of met speeltjes)',
 		'Wat vind je van orgasme-tegenhoudende technieken?',
 		'Doen of de Waarheid? <b>Doen: </b>Trek het ondergoed van elkaar uit en ga naakt verder. <b>Waarheid: </b> Wat is de meest gekke plek waar je seks hebt gehad?',
@@ -232,7 +264,9 @@ $(document).ready( function() {
 		'Heb jij gevoelige tepels? Test het uit!',
 		'Zoen je partner sensueel in de nek en let op zijn/haar ademhaling en/of hartslag',
 		'Doe je veel aan masturbatie?',
-		'Massage met of zonder happy-ending?'
+		'Massage met of zonder happy-ending?',
+		'Wat doe je als je partner vraagt om op zijn gezicht te zitten?',
+		'',
 	]);
 	
 	
@@ -273,6 +307,7 @@ $(document).ready( function() {
 	$('.question-btn-wrapper').on('click', function() {
 		// Get the next random element from the chooser
 		let result = cardsDate();
+		$('.hideCardText').css({'display':'none'});
 
 		if (result !== null) {
 			// Update the HTML with the randomly chosen string
