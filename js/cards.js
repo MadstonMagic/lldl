@@ -114,6 +114,7 @@ $(document).ready( function() {
 		'Is penetratie het belangrijkste van seks?',
 		'Slikken, ja of nee?',
 		'Stel je partner zou tijdens het klaarkomen squirten, wat vind je daar van?',
+		'Denk en doe jij veel aan masturbatie?',
 		
 		//Relationship
 		'Hecht je veel waarde aan monogamie?',
@@ -140,6 +141,7 @@ $(document).ready( function() {
 		'Wat vind je van een open-relatie?',
 		'Samen in het weekend borrelen met een borrelplank? Ja of nee?',
 		'Wanneer is het een goed moment om de ouders van elkaar te ontmoeten?',
+		
 		
 		//Future / Past
 		'Huisje Boompje Beestje of vrij in de wereld?',
@@ -213,6 +215,7 @@ $(document).ready( function() {
 		'Was jij zenuwachtig voor onze eerste date?',
 		'Ben je bang voor spinnen?',
 		'Ben je bang voor insecten?',
+		'Ben jij populair op social media?',
 		
 		// Do something
 		'Geef je date een compliment over iets dat hij/zij niet verwacht',
