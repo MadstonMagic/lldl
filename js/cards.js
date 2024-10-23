@@ -30,7 +30,7 @@ $(document).ready( function() {
 		'Liever een boek of een film?',
 		'Zou je nog op reis willen? Zo ja waar naar toe?',
 		'Vind je het belangrijk dat je partner wilt reizen?',
-		'Samen een hobby delen is belangrijk voor een goede relatie, waar of niet waar?',
+		'Samen een hobby delen is belangrijk voor een gezonde relatie, waar of niet waar?',
 		'Kaas- of chocoladefondue?',
 		'Liever een week samen op een onbewoond eiland of op een berg?',
 		'Wat was je eerste gedachte bij onze eerste date?',
@@ -69,6 +69,8 @@ $(document).ready( function() {
 		'Badpak of bikini?',
 		'Wat vind je van een man in pak?',
 		'Wat vind je van een vrouw in een mooie jurk?',
+		'Wel of geen borsthaar?',
+		'Zou jij je partner helpen epileren en puisten uitdrukken?',
 
 		// Bedtime
 		'Een partner die niet kan communiceren of slecht is in bed?',
@@ -115,6 +117,10 @@ $(document).ready( function() {
 		'Slikken, ja of nee?',
 		'Stel je partner zou tijdens het klaarkomen squirten, wat vind je daar van?',
 		'Denk en doe jij veel aan masturbatie?',
+		'Wordt jij snel geil?',
+		'Heb jij een spannende plek om seks te hebben waar je wel eens over fantaseert?',
+		'Vind jij praten over seks moeilijk?',
+		'Vind jij praten over seks een belangrijk onderdeel?',
 		
 		//Relationship
 		'Hecht je veel waarde aan monogamie?',
@@ -155,6 +161,10 @@ $(document).ready( function() {
 		'Nooit meer vlees of nooit meer vis eten?',
 		'Ben je wel eens gekwetst in de liefde? Zo ja, hoe ging je daar mee om?',
 		'Hoe ga je om met conflicten in je relatie?',
+		'Heb je ooit therapie gehad?',
+		'Wat zou je binnen 5 jaar willen bereiken?',
+		'Zou je nog gevoelens kunnen ontwikkelen voor iemand waar je in het verleden mee gezoend hebt?',
+		'Zou je kinderen willen? Zo ja, wanneer?',
 		
 		// Characteristics
 		'Wat is een eigenschap dat je <span style="font-weight:bold;">niet</span> wilt zien in je partner?',
@@ -216,6 +226,11 @@ $(document).ready( function() {
 		'Ben je bang voor spinnen?',
 		'Ben je bang voor insecten?',
 		'Ben jij populair op social media?',
+		'Waar kan jij wakker van liggen?',
+		'Waar haal jij veel energie uit?',
+		'Hoe zou jij jezelf omschrijven?',
+		'Welk onderwerp wil je liever niet in een gesprek behandelen?',
+		'Waar praat jij het liefst over?',
 		
 		// Do something
 		'Geef je date een compliment over iets dat hij/zij niet verwacht',
@@ -230,6 +245,7 @@ $(document).ready( function() {
 		'Geef je date een zoen en vertel wat je voelt.',
 		'Waar keek je het eerste naar bij je date?',
 		'Kan je date tegen kietelen? Probeer 3 plekken uit!',
+		'Laat je date jouw favoriete top 3 liedjes luisteren en beoordelen. Vertel bij elk nummer waarom deze in jouw top 3 staat.',
 		
 		// Jokers
 		'<span class=\"cardJoker\"><b>Joker kaart!</b> Zoen je date tussen nu en 30 minuten op een overwacht moment!</span>',
