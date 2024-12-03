@@ -71,6 +71,7 @@ $(document).ready( function() {
 		'Wat vind je van een vrouw in een mooie jurk?',
 		'Wel of geen borsthaar?',
 		'Zou jij je partner helpen epileren en puisten uitdrukken?',
+		'Je partner \'moet\' goede, kusbare lippen hebben. Eens of oneens?',
 
 		// Bedtime
 		'Een partner die niet kan communiceren of slecht is in bed?',
@@ -134,7 +135,7 @@ $(document).ready( function() {
 		'Geef ik je een goed gevoel van binnen?',
 		'Vind jij jezelf goed in bed?',
 		'Ben jij wel of niet dominant in bed?',
-		'Wat vind je er van als je partner veel vrienden heeft van het andere geslacht?',
+		'Je partner heeft veel vrienden van het andere geslacht. Wat vind je hier van?',
 		'Wil je straks zelf kinderen?',
 		'Je partner snurkt, is dit een afknapper?',
 		'Wat vind je belangrijk in een relatie?',
@@ -231,6 +232,10 @@ $(document).ready( function() {
 		'Hoe zou jij jezelf omschrijven?',
 		'Welk onderwerp wil je liever niet in een gesprek behandelen?',
 		'Waar praat jij het liefst over?',
+		'Wat is jouw favoriete cadeau om te krijgen?',
+		'Wat is jouw favoriete bloem?',
+		'Wat is jouw favoriete gebak?',
+		'Ben jij meer van het appen of het bellen? Waarom?',
 		
 		// Do something
 		'Geef je date een compliment over iets dat hij/zij niet verwacht',
@@ -348,5 +353,9 @@ $(document).ready( function() {
 		} else {
 			$(".cardTextArea .cardText").html(errorMessage);
 		}
+	});
+	
+	$('.btn-switchDark').on('click', function() {
+		//toggle icon
 	});
 });

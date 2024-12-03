@@ -88,7 +88,12 @@ ul.cardLayout li {padding:25px;}
 	font-size: 32px;
 	border-radius: 50px;
 }
-
+.tn-switchDark {}
+.tn-switchDark:before {
+	content: "\f186";
+	font-family: "Font Awesome 5 Pro";
+	font-size: 32px;
+}
 
 
 /* ---------------------- */
