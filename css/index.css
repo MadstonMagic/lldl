@@ -59,10 +59,11 @@ html, body {
 /* -------------------- */
 /* --- Content Main --- */
 /* -------------------- */
-.contentLLDLCards {background-color: var(--lldlRed);}
-.contentLLDLCards .headerText {font-size: 28px;color:var(--lldlWhite);}
-.contentLLDLCards .lldlCardTitle {font-size: 36px;font-weight:800;}
-.contentLLDLCards .lldlCardMenu, .lldlPartnerMenu {padding:50px;}
+.contentLLDLCards, .lldsIntimacy {background-color: var(--lldlRed);}
+.contentLLDLCards .headerText, .lldsIntimacy .headerText {font-size: 28px;color:var(--lldlWhite);}
+.contentLLDLCards .lldlCardTitle, .lldsIntimacy .lldlCardTitle {font-size: 36px;font-weight:800;}
+.contentLLDLCards .lldlCardMenu, .lldlPartnerMenu, .lldsIntimacy
+ {padding:50px;}
 
 .lldlPartnerMenu {background-color: var(--lldlWhite);}
 .lldlPartnerMenu {font-size: 28px;color:var(--lldlBlack);}

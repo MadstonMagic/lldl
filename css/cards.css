@@ -2,6 +2,7 @@
 	--lldlWhite: rgba(245,245,245,1);
 	--lldlRed: rgba(172,49,78,1);
 	--lldlDarkRed: rgba(75,20,30,1);
+	--lldlDarkRedish: rgba(71,22,49,1);
 	--lldlBlack: rgba(0,0,0,1);
 	--lldlDarkGray: rgba(26,26,26,1);
 	
@@ -19,13 +20,16 @@ html, body {
     -ms-user-select: none;
     user-select: none;
 }
-.html-lldlPartner {
+.html-lldlPartner, .html-lldlSexPos {
 	background-image: url("../images/LLDL_BackgroundPink.svg");
 	background-color: var(--lldlDarkGray);
 	background-position: center;
 	background-repeat: repeat;
 	background-size: 50%;
 	position: relative;
+}
+.html-lldlSexPos {
+	background-color: var(--lldlDarkRed);
 }
 
 /* --------------------- */
@@ -99,7 +103,7 @@ ul.cardLayout li {padding:25px;}
 /* ---------------------- */
 /* --- Shuffle Button --- */
 /* ---------------------- */
-.question-btn-wrapper, .partner-question-btn-wrapper {
+.question-btn-wrapper, .partner-question-btn-wrapper, .sexpos-question-btn-wrapper {
 	transition: all 0.2s;
     z-index: 100;
     display: block;
@@ -112,7 +116,7 @@ ul.cardLayout li {padding:25px;}
 	border-radius: 50px;
     padding: 10px 0;
 }
-.question-btn-wrapper:hover, .partner-question-btn-wrapper:hover {
+.question-btn-wrapper:hover, .partner-question-btn-wrapper:hover, .sexpos-question-btn-wrapper:hover {
 	color: var(--lldlRed);
 }
 
@@ -122,6 +126,63 @@ ul.cardLayout li {padding:25px;}
 /* ------------------- */
 span.cardJoker b { color: var(--lldlRed); }
 span.cardJoker { font-style: italic; }
+
+
+
+
+
+/* ------------------- */
+/* ---- Sex Cards ---- */
+/* ------------------- */
+.pos-card {
+	position: relative;
+	width: 100%;
+	color: var(--lldlDarkRed);
+	font-size: 22px;
+}
+.pos-card-list, .pos-description, .pos-card-list li, .pos-description li {
+	list-style-type: none;
+	text-align: center;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.pos-card-list li.pos-title {
+	font-size: 1.5em;
+	font-weight: 600;
+	color: var(--lldlDarkRed);
+	padding: 15px 0 !important;
+}
+.pos-card-list li.pos-image img {
+	max-width: 750px;
+	height: auto;
+}
+.body-lldlSexPos .content-cards .cards .cardTextArea {
+	background-color: var(--lldlDarkRedish);
+}
+.body-lldlSexPos .content-cards .cards .cardTextArea * {
+	color: var(--lldlWhite);
+}
+.body-lldlSexPos .content-cards .cards .cardTextArea img {
+	/*box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5);*/
+}
+
+
+.pos-card .pos-img {
+	transition: transform 0.2s ease-out;
+	/* Ensure smooth transitions for all properties */
+	will-change: transform;
+	margin: 50px 0;
+}
+.pos-card .pos-img:hover {
+	transform: scale(200%);
+}
+
+
+
+
+
+
+
 
 
 

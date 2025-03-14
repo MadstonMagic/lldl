@@ -14,6 +14,13 @@ $(document).ready( function() {
     });
 	
 	
+	//-------------------------------------------------------------------------------------
+	// Sex Position Card Expander
+		
+	$('.pos-img').on('click', function(){
+		alert('test');
+	});
+	
 	
 	
 	
@@ -293,10 +300,98 @@ $(document).ready( function() {
 		'',
 	]);
 	
+	// Creation of Sex Positions array
+	var cardsSexPos = randomSexPosNoRepeats([
+		// array with a lot of strings
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Oasis</li><li class="pos-image"><img class="pos-img" src="../images/spositions/04_Oasis.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Backstroke</li><li class="pos-image"><img class="pos-img" src="../images/spositions/05_Backstroke.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Midnight</li><li class="pos-image"><img class="pos-img" src="../images/spositions/06_Midnight.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Clitoral, Right Angle</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Chair</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">London Bridge</li><li class="pos-image"><img class="pos-img" src="../images/spositions/07_LondonBridge.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Fallen Warrior</li><li class="pos-image"><img class="pos-img" src="../images/spositions/08_FallenWarrior.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Man on Top</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Shallow</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Car Mechanic</li><li class="pos-image"><img class="pos-img" src="../images/spositions/09_CarMechanic.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral, Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>None</li><li class="pos-extra"><b>Accessory: </b>Bed</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Joystick</li><li class="pos-image"><img class="pos-img" src="../images/spositions/10_Joystick.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Shallow</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Bicycle</li><li class="pos-image"><img class="pos-img" src="../images/spositions/11_Bicycle.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Necktie</li><li class="pos-image"><img class="pos-img" src="../images/spositions/12_Necktie.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>From Behind</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Wedge</li><li class="pos-image"><img class="pos-img" src="../images/spos/10_TEMP_Wedge.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Couch/Sofa</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Louise</li><li class="pos-image"><img class="pos-img" src="../images/spos/11_TEMP_Louise.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Shallow</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Taurus</li><li class="pos-image"><img class="pos-img" src="../images/spos/12_TEMP_Taurus.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Piledriver</li><li class="pos-image"><img class="pos-img" src="../images/spos/13_TEMP_Piledriver.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Man on Top</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Libido</li><li class="pos-image"><img class="pos-img" src="../images/spos/14_TEMP_Libido.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Beautiful View</li><li class="pos-image"><img class="pos-img" src="../images/spos/15_TEMP_BeautifulView.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Right Angle</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Ribbon</li><li class="pos-image"><img class="pos-img" src="../images/spos/16_TEMP_Ribbon.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Rodeo</li><li class="pos-image"><img class="pos-img" src="../images/spos/17_TEMP_Rodeo.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Dragon</li><li class="pos-image"><img class="pos-img" src="../images/spos/18_TEMP_Dragon.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral, Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>None</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Apologies</li><li class="pos-image"><img class="pos-img" src="../images/spos/19_TEMP_Apologies.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral, Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>None</li><li class="pos-extra"><b>Accessory: </b>Table & Chair/Bed</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Back Alley</li><li class="pos-image"><img class="pos-img" src="../images/spos/20_TEMP_BackAlley.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Feeder</li><li class="pos-image"><img class="pos-img" src="../images/spos/21_TEMP_Feeder.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral/Anus Stimulation</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>None</li><li class="pos-extra"><b>Accessory: </b>Chair/Bed</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Knot</li><li class="pos-image"><img class="pos-img" src="../images/spos/22_TEMP_Knot.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Cowgirl</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Need for Speed</li><li class="pos-image"><img class="pos-img" src="../images/spos/23_TEMP_NeedForSpeed.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Chair/Couch/Sofa/Fitness Ball</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Iron</li><li class="pos-image"><img class="pos-img" src="../images/spos/24_TEMP_Iron.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Shallow</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Rear Admiral</li><li class="pos-image"><img class="pos-img" src="../images/spos/25_TEMP_RearAdmiral.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Merger</li><li class="pos-image"><img class="pos-img" src="../images/spos/26_TEMP_Merger.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Chair/Couch/Sofa/Bed</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Tamer</li><li class="pos-image"><img class="pos-img" src="../images/spos/27_TEMP_Tamer.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Moan</li><li class="pos-image"><img class="pos-img" src="../images/spos/28_TEMP_Moan.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral, Blowjob</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>None</li><li class="pos-extra"><b>Accessory: </b>Chair/Couch/Sofa/Fitness Ball</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Adventurer</li><li class="pos-image"><img class="pos-img" src="../images/spos/29_TEMP_Adventurer.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Man on Top</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Couch/Sofa</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Crouching Tiger</li><li class="pos-image"><img class="pos-img" src="../images/spos/30_TEMP_CrouchingTiger.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Cowgirl</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Delicacy</li><li class="pos-image"><img class="pos-img" src="../images/spos/31_TEMP_Delicacy.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li><li class="pos-extra"><b>Accessory: </b>Chair & Table</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Strum</li><li class="pos-image"><img class="pos-img" src="../images/spos/32_TEMP_Strum.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Criss Cross</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Shallow</li><li class="pos-extra"><b>Accessory: </b>Chair</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Chameleon</li><li class="pos-image"><img class="pos-img" src="../images/spos/33_TEMP_Chameleon.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">XXX</li><li class="pos-image"><img class="pos-img" src="../images/spos/34_TEMP_XXX.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Man on Top</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li><li class="pos-extra"><b>Accessory: </b>Chair/Couch/Sofa/Bed</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Symphony</li><li class="pos-image"><img class="pos-img" src="../images/spos/35_TEMP_Symphony.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral, Blowjowb</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>None</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Inquisitor</li><li class="pos-image"><img class="pos-img" src="../images/spos/36_TEMP_Inquisitor.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral, Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>None</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Captain</li><li class="pos-image"><img class="pos-img" src="../images/spos/37_TEMP_Captain.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Grasshopper</li><li class="pos-image"><img class="pos-img" src="../images/spos/38_TEMP_Grasshopper.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">G-Force</li><li class="pos-image"><img class="pos-img" src="../images/spos/39_TEMP_GForce.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Right Angle</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Middle</li><li class="pos-extra"><b>Accessory: </b>Chair/Couch/Sofa/Bed/Fitness Ball</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Hungry Hippo</li><li class="pos-image"><img class="pos-img" src="../images/spos/40_TEMP_HungryHippo.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Missionary</li><li class="pos-image"><img class="pos-img" src="../images/spos/41_TEMP_Missionary.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Spread Eagle</li><li class="pos-image"><img class="pos-img" src="../images/spos/42_TEMP_SpreadEagle.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Jellyfish</li><li class="pos-image"><img class="pos-img" src="../images/spos/43_TEMP_Jellyfish.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Shallow</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Juicy Ass</li><li class="pos-image"><img class="pos-img" src="../images/spos/44_TEMP_JuicyAss.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Doggy</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Bed</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Catapult</li><li class="pos-image"><img class="pos-img" src="../images/spos/45_TEMP_Catapult.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Bed</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Hood</li><li class="pos-image"><img class="pos-img" src="../images/spos/46_TEMP_Hood.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral, Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>None</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Cave</li><li class="pos-image"><img class="pos-img" src="../images/spos/47_TEMP_Cave.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Doggy</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Exciting Game</li><li class="pos-image"><img class="pos-img" src="../images/spos/48_TEMP_ExcitingGame.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Doggy</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li><li class="pos-extra"><b>Accessory: </b>Chair</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Prone Bone</li><li class="pos-image"><img class="pos-img" src="../images/spos/49_TEMP_ProneBone.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>From Behind</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Backdoor</li><li class="pos-image"><img class="pos-img" src="../images/spos/50_TEMP_Backdoor.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Criss Cross</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Hot Lunch</li><li class="pos-image"><img class="pos-img" src="../images/spos/51_TEMP_HotLunch.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral/Anus Stimulation</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>None</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Bow & Arrow</li><li class="pos-image"><img class="pos-img" src="../images/spos/52_TEMP_BowAndArrow.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Doggy</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Nun</li><li class="pos-image"><img class="pos-img" src="../images/spos/53_TEMP_Nun.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Cowgirl</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Japan</li><li class="pos-image"><img class="pos-img" src="../images/spos/54_TEMP_Japan.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Criss Cross</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>Middle</li><li class="pos-extra"><b>Accessory: </b>Chair</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Close Breathing</li><li class="pos-image"><img class="pos-img" src="../images/spos/55_TEMP_CloseBreathing.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>Middle</li><li class="pos-extra"><b>Accessory: </b>Chair</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Hero</li><li class="pos-image"><img class="pos-img" src="../images/spos/56_TEMP_Hero.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Kneeling</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">She Wolf</li><li class="pos-image"><img class="pos-img" src="../images/spos/57_TEMP_SheWolf.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Twix</li><li class="pos-image"><img class="pos-img" src="../images/spos/58_TEMP_Twix.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Shallow</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Belt</li><li class="pos-image"><img class="pos-img" src="../images/spos/59_TEMP_Belt.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>From Behind</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',,
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Liana</li><li class="pos-image"><img class="pos-img" src="../images/spos/60_TEMP_Liana.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Shallow</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Pokemon</li><li class="pos-image"><img class="pos-img" src="../images/spos/61_TEMP_Pokemon.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Cowgirl</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Chair/Couch/Sofa/Fitness Ball</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Narcissus</li><li class="pos-image"><img class="pos-img" src="../images/spos/62_TEMP_Narcissus.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Hummingbird</li><li class="pos-image"><img class="pos-img" src="../images/spos/63_TEMP_Hummingbird.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Couch/Sofa/Fitness Ball</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Lapdance</li><li class="pos-image"><img class="pos-img" src="../images/spos/64_TEMP_Lapdance.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>From Behind</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Shallow</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Whisper</li><li class="pos-image"><img class="pos-img" src="../images/spos/65_TEMP_Whisper.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral, Blowjob</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>None</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Open Book</li><li class="pos-image"><img class="pos-img" src="../images/spos/66_TEMP_OpenBook.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Face to Face</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Unicorn</li><li class="pos-image"><img class="pos-img" src="../images/spos/67_TEMP_Unicorn.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Tornado</li><li class="pos-image"><img class="pos-img" src="../images/spos/68_TEMP_Tornado.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Criss Cross</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Keeper</li><li class="pos-image"><img class="pos-img" src="../images/spos/69_TEMP_Keeper.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Right Angle</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Bed/Low Table</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Launch Pad</li><li class="pos-image"><img class="pos-img" src="../images/spos/70_TEMP_LaunchPad.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Vaginal/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Stuntman</li><li class="pos-image"><img class="pos-img" src="../images/spos/71_TEMP_Stuntman.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Right Angle</li><li class="pos-difficulty"><b>Difficulty: </b>Hard</li><li class="pos-pen"><b>Penetration: </b>Deep</li><li class="pos-extra"><b>Accessory: </b>Bed/Fitness Ball</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Doggy</li><li class="pos-image"><img class="pos-img" src="../images/spos/72_Doggy.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Doggy</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Anal Doggy</li><li class="pos-image"><img class="pos-img" src="../images/spos/72_Doggy.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Doggy/Anal</li><li class="pos-difficulty"><b>Difficulty: </b>Easy</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Cowgirl</li><li class="pos-image"><img class="pos-img" src="../images/spos/73_Cowgirl.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Cowgirl</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Middle</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Reverse Cowgirl</li><li class="pos-image"><img class="pos-img" src="../images/spos/74_ReverseCowgirl.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Cowgirl</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Kneeling Cowgirl</li><li class="pos-image"><img class="pos-img" src="../images/spos/75_KneelingCowgirl.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Cowgirl</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Kneeling Reverse Cowgirl</li><li class="pos-image"><img class="pos-img" src="../images/spos/76_KneelingReverseCowgirl.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Cowgirl</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>Deep</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Feeding Squat</li><li class="pos-image"><img class="pos-img" src="../images/spos/77_FeedingSquat.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral, Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>None</li></ul></div>',
+		'<div class="pos-card"><ul class="pos-card-list"><li class="pos-title">Facesitting</li><li class="pos-image"><img class="pos-img" src="../images/spos/78_Facesitting.png" alt="position"></li></ul><ul class="pos-description"><li class="pos-type"><b>Type: </b>Oral, Clitoral</li><li class="pos-difficulty"><b>Difficulty: </b>Medium</li><li class="pos-pen"><b>Penetration: </b>None</li></ul></div>'
+	]);
+	
 	
 	// error message when getting to the final question
 	var errorMessage = "Je hebt alle kaarten gehad! Zodra we nieuwe vragen hebben toegevoegd, vind je dat aan de linkerkant!<br>Nog een keer spelen? Ververs de pagina!";
 	
+	// error message when getting to the final question
+	var errorMessageSP = "Niet gevonden wat je leuk vond? Kom dan nog een keertje terug!";
+	
+	//-------------------------------------------------------------------------------------
 	// Date Cards
 	function randomDateNoRepeats(array) {
 		var copy = array.slice(0); // Make a copy of the original array
@@ -312,6 +407,7 @@ $(document).ready( function() {
 		};
 	}
 	
+	//-------------------------------------------------------------------------------------
 	// Partner Cards
 	function randomPartnerNoRepeats(array) {
 		var copy = array.slice(0); // Make a copy of the original array
@@ -326,12 +422,30 @@ $(document).ready( function() {
 			return item;
 		};
 	}
+	
+	//-------------------------------------------------------------------------------------
+	// Sex Positions Cards
+	function randomSexPosNoRepeats(array) {
+		var copy = array.slice(0); // Make a copy of the original array
 
+		return function() {
+			if (copy.length === 0) {
+				return null; // Stop once all items are picked
+			}
+			var index = Math.floor(Math.random() * copy.length);
+			var item = copy[index];
+			copy.splice(index, 1); // Remove the picked item
+			return item;
+		};
+	}
+
+	//-------------------------------------------------------------------------------------
 	// Click handler for the button - Date Cards
 	$('.question-btn-wrapper').on('click', function() {
 		// Get the next random element from the chooser
 		let result = cardsDate();
 		$('.hideCardText').css({'display':'none'});
+		$(this).html('Volgende Kaart!');
 
 		if (result !== null) {
 			// Update the HTML with the randomly chosen string
@@ -341,11 +455,12 @@ $(document).ready( function() {
 		}
 	});
 
-
+	//-------------------------------------------------------------------------------------
 	// Click handler for the button - Partner Cards
 	$('.partner-question-btn-wrapper').on('click', function() {
 		// Get the next random element from the chooser
 		let result = cardsPartner();
+		$(this).html('Volgende Kaart!');
 
 		if (result !== null) {
 			// Update the HTML with the randomly chosen string
@@ -354,8 +469,33 @@ $(document).ready( function() {
 			$(".cardTextArea .cardText").html(errorMessage);
 		}
 	});
-	
-	$('.btn-switchDark').on('click', function() {
-		//toggle icon
+
+	//-------------------------------------------------------------------------------------
+	// Click handler for the button - Sex Positions Cards
+	$('.sexpos-question-btn-wrapper').on('click', function() {
+		// Get the next random element from the chooser
+		let result = cardsSexPos();
+		$(this).html('Volgende Positie!');
+
+		if (result !== null) {
+			// Update the HTML with the randomly chosen string
+			$(".cardTextArea .cardText").html(result);
+		} else {
+			$(".cardTextArea .cardText").html(errorMessageSP);
+		}
 	});
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
