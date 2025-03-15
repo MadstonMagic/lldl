@@ -91,6 +91,7 @@ ul.cardLayout li {padding:25px;}
 	widht: 100%;
 	font-size: 32px;
 	border-radius: 50px;
+	position: relative;
 }
 .tn-switchDark {}
 .tn-switchDark:before {
@@ -154,12 +155,9 @@ span.cardJoker { font-style: italic; }
 	font-size: 1.5em;
 	font-weight: 600;
 	color: var(--lldlDarkRed);
-	padding: 15px 0 !important;
+	padding: 5px 0 !important;
 }
-.pos-card-list li.pos-image img {
-	max-width: 750px;
-	height: auto;
-}
+.pos-card .pos-img { width: 100%; }
 .body-lldlSexPos .content-cards .cards .cardTextArea {
 	background-color: var(--lldlDarkRedish);
 }
@@ -167,7 +165,7 @@ span.cardJoker { font-style: italic; }
 	color: var(--lldlWhite);
 }
 .pos-card .pos-img {
-	margin: 50px 0;
+	margin: 5px 0;
 }
 .img-enlarge .pos-img {
 	transform: scale(200%);
@@ -206,7 +204,7 @@ span.cardJoker { font-style: italic; }
 /* PC Browser Media */
 @media only screen and (max-width: 1920px) {
 	.content-cards .cards {width: calc(75vw);}
-	.pos-card .pos-img {width: 75%;}
+	.pos-card .pos-img {width: 100%;}
 }
 @media only screen and (max-width: 1200px) {
 	.content-cards .cards {width: calc(95vw);}
