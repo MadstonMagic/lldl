@@ -7,16 +7,16 @@
 	--lldlBlack: rgba(0,0,0,1);
 	--lldlDarkGray: rgba(26,26,26,1);
 	
-	--lldsGradPen: 		linear-gradient(to top, rgba(3,215,175,0.5), rgba(255,0,0,0.5));
-	--lldsPen:			rgba(0,120,105,1);
-	--lldsGradAnal: 	linear-gradient(to top, rgba(0,161,161,0.5), rgba(142,105,21,0.5));
-	--lldsAnal: 		rgba(0,102,102,1);
-	--lldsGradMbate: 	linear-gradient(to top, rgba(0,52,25,1) , rgba(116,255,109,0.25));
-	--lldsMbate: 		rgba(0,52,25,1);
-	--lldsGradFinger: 	linear-gradient(to top, rgba(137,5,142,0.5), rgba(255,255,255,0.5));
-	--lldsFinger: 		rgba(137,5,142,1);
-	--lldsGradOral: 	linear-gradient(to top, rgba(72,0,0,0.5), rgba(80,103,255,0.5));
-	--lldsOral: 		rgba(72,0,0,1);
+	--lldsGradPen: 		linear-gradient(to top, rgba(141, 32, 35, 1), rgba(241, 95, 98, 1));
+	--lldsPen:			rgba(141, 32, 35, 1);
+	--lldsGradAnal: 	linear-gradient(to top, rgba(119, 86, 27, 1), rgba(240, 195, 114, 1));
+	--lldsAnal: 		rgba(119, 86, 27, 1);
+	--lldsGradMbate: 	linear-gradient(to top, rgba(11, 84, 129, 1), rgba(110, 184, 230, 1));
+	--lldsMbate: 		rgba(11, 84, 129, 1);
+	--lldsGradFinger: 	linear-gradient(to top, rgba(111, 61, 60, 1), rgba(232, 172, 171, 1));
+	--lldsFinger: 		rgba(111, 61, 60, 1);
+	--lldsGradOral: 	linear-gradient(to top, rgba(91, 74, 139, 1), rgba(167, 154, 203, 1));
+	--lldsOral: 		rgba(91, 74, 139, 1);
 	
 	--mainFont: "Quicksand";
 }
